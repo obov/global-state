@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useStore } from "./store";
+import { subscribers, useStore } from "./store";
 
 function App() {
   return (
@@ -49,6 +49,7 @@ function App() {
           </div>
         </div>
       </div>
+      <button onClick={() => console.log(subscribers)}>subs</button>
     </div>
   );
 }

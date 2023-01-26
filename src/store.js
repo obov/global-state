@@ -1,7 +1,13 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 let global = "global state";
-let subscribers = new Set();
+
+export let subscribers = new Set();
+
+const subscribe = (callback) => {
+  subscribers.add(callback);
+  return () => subscribers.delete(callback);
+};
 
 const setter = (value) => {
   global = value;
@@ -15,6 +21,8 @@ const getter = () => {
 
 export const useStore = () => {
   const [value, setValue] = useState(getter());
-  subscribers.add(() => setValue(getter()));
+  useEffect(() => {
+    return subscribe(() => setValue(getter()));
+  }, []);
   return [value, setter];
 };
