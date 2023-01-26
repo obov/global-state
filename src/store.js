@@ -18,4 +18,3 @@ export const useStore = () => {
   subscribers.add(() => setValue(getter()));
   return [value, setter];
 };
-export default global;
