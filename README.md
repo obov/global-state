@@ -1,5 +1,5 @@
 # 전역 상태 관리도구 입니다
- - 굉장히 조악합니다. 실용성보다는 개념적으로 이해하기 위함입니다.
+ - 실용성보다는 개념적으로 이해하기 위함입니다.
  - contextAPI 사용하지 않고 구현했습니다. 의존성이 있다면 리엑트의 useState에 대한 의존성을 갖고 있습니다.
  
  ![globalstate](https://user-images.githubusercontent.com/59566239/214877242-61c1dae2-d504-4e9c-8d41-58e5283e8c35.gif)
